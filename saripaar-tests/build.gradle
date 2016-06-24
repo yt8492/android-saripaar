@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '24.0.0'
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         applicationId "com.mobsandgeeks.saripaar.tests"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -30,7 +30,7 @@ dependencies {
     compile project(':saripaar')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.wrapp.floatlabelededittext:library:0.0.5'
-    compile 'com.android.support:support-annotations:24.0.0'
+    compile 'com.android.support:support-annotations:23.0.1'
 
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
     androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
