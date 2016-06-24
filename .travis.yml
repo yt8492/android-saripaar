@@ -4,14 +4,14 @@ jdk: oraclejdk7
 
 env:
   matrix:
-    - ANDROID_TARGET=android-24  ANDROID_ABI=x86
+    - ANDROID_TARGET=android-23  ANDROID_ABI=x86
 
 android:
   components:
     - platform-tools
     - tools
-    - build-tools-24.0.0
-    - android-24
+    - build-tools-23.0.3
+    - android-23
 
 before_script:
   # Grant execution permissions to Gradle wrapper
