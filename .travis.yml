@@ -23,8 +23,9 @@ android:
     - sys-img-armeabi-v7a-android-$ANDROID_API_LEVEL
 
 before_script:
-  # Grant execution permissions to Gradle wrapper
+  # Grant execution permissions
   - chmod +x gradlew
+  - chmod +x wait_for_emulator
 
   # Create and start emulator
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
