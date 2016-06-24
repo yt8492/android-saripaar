@@ -1,10 +1,13 @@
 language: android
-
 jdk: oraclejdk7
+cache: false
+sudo: true
 
 env:
-  matrix:
-    - ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+  global:
+    - ANDROID_API_LEVEL=23
+    - ANDROID_TARGET=android-23
+    - ANDROID_ABI=armeabi-v7a
 
 android:
   components:
@@ -12,6 +15,12 @@ android:
     - tools
     - build-tools-23.0.3
     - android-23
+    - extra-android-support
+    # Latest artifacts in local repository
+    - extra-google-m2repository
+    - extra-android-m2repository
+    # Specify at least one system image
+    - sys-img-armeabi-v7a-android-$ANDROID_API_LEVEL
 
 before_script:
   # Grant execution permissions to Gradle wrapper
